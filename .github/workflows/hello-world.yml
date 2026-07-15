@@ -1,21 +1,9 @@
 name: basic
-
 on: [push] # Startet den Workflow bei jedem Push in das Repository
-
 jobs:
   log:
     runs-on: ubuntu-latest # Nutzt einen virtuellen Ubuntu-Server von GitHub
     steps:
      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-  say-hello1:
-    runs-on: ubuntu-latest # Nutzt einen virtuellen Ubuntu-Server von GitHub
-    steps:
-      - name: Text ausgeben
-        run: echo "Hello World1" # Führt den Befehl im Terminal aus
-  say-hello2:
-    runs-on: ubuntu-latest # Nutzt einen virtuellen Ubuntu-Server von GitHub
-    steps:
-      - name: Text ausgeben
-        run: echo "Hello World2" # Führt den Befehl im Terminal aus
+     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}"
