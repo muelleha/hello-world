@@ -1,4 +1,4 @@
-name: Hello World Beispiel
+name: basic
 
 on: [push] # Startet den Workflow bei jedem Push in das Repository
 
