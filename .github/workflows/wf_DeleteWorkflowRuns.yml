@@ -1,10 +1,10 @@
-name: DeleteWorkflowRuns
+name: CleanWorkflowRuns
 on:
   schedule:
     - cron: '* * * * *'
   workflow_dispatch: # ERMÖGLICHT DEN MANUELLEN START
 jobs:
-  cleanup:
+  clean:
     runs-on: ubuntu-latest
     
     # HIER WERDEN DIE RECHTE GESETZT:
