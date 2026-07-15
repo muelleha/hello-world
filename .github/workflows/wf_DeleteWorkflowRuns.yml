@@ -1,0 +1,21 @@
+name: DeleteWorkflowRuns
+on:
+  schedule:
+    - cron: '* * * * *'
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    
+    # HIER WERDEN DIE RECHTE GESETZT:
+    permissions:
+      actions: write # Erlaubt dem automatischen Token das Löschen
+      
+    steps:
+      - name: Delete old runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }} # GitHub setzt das Token hier automatisch ein
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 3
