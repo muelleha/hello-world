@@ -1,5 +1,7 @@
 name: basic
-on: [push] # Startet den Workflow bei jedem Push in das Repository
+on: 
+  push: # Startet den Workflow bei jedem Push in das Repository
+  workflow_dispatch: # ERMÖGLICHT DEN MANUELLEN START
 jobs:
   log:
     runs-on: ubuntu-latest # Nutzt einen virtuellen Ubuntu-Server von GitHub
