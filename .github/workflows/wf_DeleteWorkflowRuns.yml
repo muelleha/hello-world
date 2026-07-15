@@ -2,7 +2,7 @@ name: DeleteWorkflowRuns
 on:
   schedule:
     - cron: '* * * * *'
-
+  workflow_dispatch: # ERMÖGLICHT DEN MANUELLEN START
 jobs:
   cleanup:
     runs-on: ubuntu-latest
